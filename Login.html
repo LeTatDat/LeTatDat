@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Login-style.css">
+        <link rel="stylesheet" href="SignUp-style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </head>
+    <body>
+        <section id="Login">
+            <div class="img-bg">
+                <img src="./istockphoto-1157106624-612x612.jpg">
+            </div>
+            <div class="noi-dung">
+                <div class="form-dang-nhap">
+                    <h2>Trang Đăng Nhập</h2>
+                    <form onsubmit="login()">
+                        <div class="input-form">
+                            <span>Tài khoản</span>
+                            <input type="text" name="Tai-khoan" id="Tai-khoan">
+                        </div>
+                        <div class="input-form">
+                            <span>Email</span>
+                            <input type="text" name="Email" id="Email">
+                        </div>
+                        <div class="input-form">
+                            <span>Mật khẩu</span>
+                            <input type="password" name="Password" id="Password">
+                        </div>
+                        <div class="nho-dang-nhap">
+                            <label><input type="checkbox">Nhớ đăng nhập</label>
+                        </div>
+                        <div class="input-form-special">
+                            <button id="Sign-in">Đăng nhập</button>
+                        </div>
+                        <div class="input-form">
+                            <p>Bạn chưa có tài khoản? <a id="Dang-ky-btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng ký</a></p>
+                        </div>
+                    </form>
+                    <h3>Đăng nhập bằng mạng xã hội</h3>
+                    <ul class="icon-dang-nhap">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-google"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                    </ul>
+                    <div>
+                         <a href="#" class="btn btn-danger" role="button" id="Back-button"><p> Quay lại</p></a>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" onsubmit="signup()">
+    <div class="container">
+      <h1>Đăng ký</h1>
+      <p>Điền thông tin tài khoản của bạn.</p>
+      <hr>
+      <label for="TK"><b>Tài khoản</b></label>
+      <input id="TK" type="text" placeholder="Nhập tài khoản" name="TK" required>
+      <label for="email"><b>Email</b></label>
+      <input id="email" type="text" placeholder="Nhập email" name="email" required>
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input id="psw" type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+      <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+      <input id="psw-repeat" type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="Remember" style="margin-bottom:15px"> Nhớ tài khoản
+      </label>
+
+      <p>Đồng ý với điều khoản của chúng tôi <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+        <button type="submit" class="signupbtn">Đăng ký</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+            
+         // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script src="SignUp-JS.js"></script>
+</div>
+</body>
+
+</html>
